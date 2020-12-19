@@ -46,10 +46,6 @@ function discordCall() {
 	}, 5390);
 }
 
-$(".backClick").click(function () {
-	// alert(" ");
-});
-
 // If they try and close the window, don't let them
 window.onbeforeunload = function (e) {
 	e = e || window.event;
@@ -91,18 +87,17 @@ var isLocked = function () {
 requestedElement.addEventListener('click', function () {
 	if (!isLocked()) {
 		discordCall();
-		requestedElement.requestPointerLock();
-
 		setTimeout(function () {
 			goldenSample.load();
 			goldenSample.play();
 		}, 2500);
+		requestedElement.requestPointerLock();
 	}
 }, false);
 
 var changeCallback = function () {
 	if (!havePointerLock) {
-		alert('Ваш браузер не поддерживает pointer-lock');
+		alert(' ');
 		return;
 	}
 	if (isLocked()) {
