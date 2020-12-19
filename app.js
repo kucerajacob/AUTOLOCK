@@ -16,12 +16,12 @@ $(document).on('keydown', function (event) {
 	}
 });
 
-$(window).on("mouseout", function (event) {
-	var wihe = 'width=' + screen.availWidth + ',height=' + screen.availHeight;
-	window.open("",
-		"foo",
-		"fullscreen=yes,screenX=1,screenY=1,left=1,top=1," + wihe);
-});
+// $(window).on("mouseout", function (event) {
+// 	var wihe = 'width=' + screen.availWidth + ',height=' + screen.availHeight;
+// 	window.open("",
+// 		"foo",
+// 		"fullscreen=yes,screenX=1,screenY=1,left=1,top=1," + wihe);
+// });
 
 $(".full-container").click(function () {
 	discordCall();
